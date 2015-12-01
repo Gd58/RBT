@@ -184,19 +184,22 @@ public:
 				}
 				else if (lhs->parent->l_child == lhs){
 					lhs->parent = lhs;
-					retote_left(lhs);
+					retote_right(lhs);
 				}
 				lhs->parent->color = black;
 				lhs->parent->parent->color = red;
-				rotate_right(lhs->parent->parent);
+				rotate_left(lhs->parent->parent);
 			}
 		}
 		root->color = black;
 	}
+	//under construction
 	void delete_node(node *lhs)
 	{
 
 	}
+	//under construction
+	
 	void delete_update(node *lhs){
 
 	}
